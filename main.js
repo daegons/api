@@ -23,12 +23,12 @@ fetch("info.json")
     var marker = new kakao.maps.Marker({ //Marker
         map: map, // 마커를 표시할 지도
         position: position, // 마커의 위치
-        image: markerImage
+        image: markerImage //마커 이미지
     });
 
     // 마커에 표시할 인포윈도우를 생성합니다 
     var infowindow = new kakao.maps.InfoWindow({
-        content: title // 인포윈도우에 표시할 내용
+        content: `<div style='width:100%;background:red;display: inline-block;'>${title}</div>` // 인포윈도우에 표시할 내용
     });
 
     // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
